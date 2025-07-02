@@ -6,6 +6,7 @@
         }
         body{
             background-image: url(Backg.jpg);
+            backgroung-size: cover;
             font-family: 'Times New Roman', Times, serif;
             color:white;
         }
