@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body {
+  font-family: 'Georgia', serif;
+  background: url('Backg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f9e8d2;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+  nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 230px;
+            padding: 0;
+            overflow-x: hidden;
+            transition: transform 0.3s ease;
+            z-index: 2000;
+        }
+    
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 60px;
+        }
+        
+        #menu-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: transparent;
+            color: white;
+            font-size: 50px;
+            border: none;
+            padding: 10px 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        
+        .menu {
+            list-style-type: none;
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        #collapsed {
+            position: fixed;
+            height: 100vh;
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 60px;
+            transition: transform 0.5s ease;
+            transform: translateX(0);
+            z-index: 999;
+        }
+        
+        #collapsed.menu {
+            transform: translateX(-100%);
+        }
+        
+        .navbar a {
+            display: flex;
+            text-decoration: none;
+            align-items: flex-start;
+            color: white;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            padding: 20px;
+        }
+
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li{
+            position: relative;
+        }
+        ul li a{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            text-decoration: none;
+            align-items: flex-start;
+            color: white;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            padding: 20px;
+        }
+
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: rgba(30, 15, 0, 0.7);
+}
+.customer-reviews {
+  margin-top: 30px;
+  padding: 30px 0;
+  border-top: 1px solid #f8cfa0;
+  background-color: rgba(255, 255, 255, 0.05);
+ margin: auto;
+}
+
+.reviews-title {
+  text-align: center;
+  font-size: 30px;
+  color: #ffcc99;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.review-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #f8cfa0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.review-text {
+  font-style: italic;
+  color: #fff9ec;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.review-author {
+  text-align: right;
+  font-weight: bold;
+  color: #ffdfba;
+  font-size: 14px;
+}

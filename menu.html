@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - [Bakery Name]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="bake.jpg" type="image/jpg">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: #f5e8c7; 
+    color: #4a3728; 
+    line-height: 1.6;
+}
+
+  nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 230px;
+            padding: 0;
+            overflow-x: hidden;
+            transition: transform 0.3s ease;
+            z-index: 2000;
+        }
+    
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 60px;
+        }
+        
+        #menu-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: transparent;
+            color: white;
+            font-size: 50px;
+            border: none;
+            padding: 10px 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        
+        .menu {
+            list-style-type: none;
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        #collapsed {
+            position: fixed;
+            height: 100vh;
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 60px;
+            transition: transform 0.5s ease;
+            transform: translateX(0);
+            z-index: 999;
+        }
+        
+        #collapsed.menu {
+            transform: translateX(-100%);
+        }
+        
+        .navbar a {
+            display: flex;
+            text-decoration: none;
+            align-items: flex-start;
+            color: white;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            padding: 20px;
+        }
+
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li{
+            position: relative;
+        }
+        ul li a{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            text-decoration: none;
+            align-items: flex-start;
+            color: white;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            padding: 20px;
+        }
+
+
+.banner {
+    position: relative;
+    height: 400px;
+    background-image: url('https://via.placeholder.com/1200x400?text=Bakery+Menu+Banner'); /* Placeholder for banner image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.banner h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.menu-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.menu-category {
+    margin-bottom: 40px;
+}
+
+.menu-category h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #a0522d; 
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fffaf0; 
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.item-details p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #854321;
+}
+
+.order-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #a0522d; /* Rustic brown */
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #854321;
+}
+
+
+footer {
+    background-color: #e8d5a8; 
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #d2b48c;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+        display: flex; 
+        justify-content: center; 
+        gap: 15px; 
+        margin-top: 10px; 
+    }
+    .social-icons a {
+        color: #4a3728; 
+        font-size: 24px; 
+        transition: color 0.3s ease, transform 0.3s ease; 
+    }
+
+    .social-icons a:hover {
+        color: #a0522d; 
+        transform: scale(1.2);
+    }
+
+
+@media (max-width: 768px) {
+    .banner h1 {
+        font-size: 36px;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-item img {
+        margin: 0 0 15px 0;
+    }
+}
+</style>
+</head>
+<body>
+    <header class="banner">
+        <div class="logo"><img src="bake.jpg" height="80vh" alt=""></div>
+        <h1>Our Menu</h1>
+        <nav id="navbar">
+        <button id="menu-toggle">=</button>    
+        <ul class="menu" id="collapsed">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="orderonline.html">Order online</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="catering.html">Catering and Events</a></li>
+            <li><a href="season.html">Seasonal specials</a></li>
+            <li><a href="customer.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="faq.html">FAQs</a></li>  
+        </ul> 
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu-section">
+            <div class="menu-category">
+                <h2>Breads</h2>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/100" alt="Sourdough Bread">
+                    <div class="item-details">
+                        <h3>Sourdough Loaf</h3>
+                        <p>Crusty, tangy, and made with our signature starter. Perfect for sandwiches or toast.</p>
+                        <span class="price">$5.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/100" alt="Baguette">
+                    <div class="item-details">
+                        <h3>Classic Baguette</h3>
+                        <p>Golden crust with a soft, airy interior. A French staple!</p>
+                        <span class="price">$3.50</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2>Pastries</h2>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/100" alt="Croissant">
+                    <div class="item-details">
+                        <h3>Butter Croissant</h3>
+                        <p>Flaky, buttery layers baked to golden perfection.</p>
+                        <span class="price">$2.50</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/100" alt="Danish">
+                    <div class="item-details">
+                        <h3>Fruit Danish</h3>
+                        <p>Sweet pastry filled with seasonal fruit and a drizzle of glaze.</p>
+                        <span class="price">$3.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2>Cakes</h2>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/100" alt="Chocolate Cake">
+                    <div class="item-details">
+                        <h3>Chocolate Layer Cake</h3>
+                        <p>Rich chocolate sponge with creamy ganache frosting.</p>
+                        <span class="price">$35.00 (Whole) / $5.00 (Slice)</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/100" alt="Lemon Cake">
+                    <div class="item-details">
+                        <h3>Lemon Raspberry Cake</h3>
+                        <p>Tangy lemon sponge with raspberry filling and buttercream.</p>
+                        <span class="price">$38.00 (Whole) / $5.50 (Slice)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2>Beverages</h2>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/100" alt="Coffee">
+                    <div class="item-details">
+                        <h3>Artisan Coffee</h3>
+                        <p>Locally roasted beans, brewed fresh daily.</p>
+                        <span class="price">$3.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://via.placeholder.com/100" alt="Herbal Tea">
+                    <div class="item-details">
+                        <h3>Herbal Tea</h3>
+                        <p>A soothing blend of chamomile and mint.</p>
+                        <span class="price">$2.50</span>
+                    </div>
+                </div>
+            </div>
+          
+            <a href="#" class="order-button">Order Now</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>#THEBESTBAKERY| 123 Sweet Street, [Ikenne, Ogun State] 12345</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+  <script>
+        document.getElementById('menu-toggle').addEventListener('click', function(){
+    document.getElementById('collapsed').classList.toggle('menu');
+    document.getElementById('main-wrapper').classList.toggle('shifted');
+});
+    </script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="icon" href="bake.jpg" type="image/jpg">
+</head>
+<body>
+    <div class="logo">
+        <img src="bake.jpg">
+    </div>
+    
+    <nav class="navbar">
+        <button id="menu-toggle">=</button>
+        <ul class="menu" id="collapsed">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="orderonline.html">Order Online</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="catering.html">Catering and Events</a>
+            <a href="season.html">Seasonal Specials</a>
+            <a href="customer.html">Customer Reviews</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQs</a>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="lightbox" onclick="closeImage()" tabindex="-1">
+            <img id="lightbox-img">
+        </div>
+
+        <div class="cakes">
+        <h1>Our Gallery</h1>
+        <h2>CAKES</h2>
+        <p>Take a look at some of our lovely cakes</p>
+        <div class="gallery-wrapper">
+            <button id="prevBtn" class="arrow left" onclick="scrollGallery(-1, 'imageGallery')"> < </button>         
+          
+                <div class="images" id="imageGallery">
+                    <img src="Drip cake.jpg" onclick="openImage(this, 0)">
+                    <img src="Oreo drip cake.jpg" onclick="openImage(this, 1)">
+                    <img src="goat cake.jpg" onclick="openImage(this, 2)">
+                    <img src="Pink cat cake.jpg" onclick="openImage(this, 3)">
+                </div>
+           
+            <button id="nextBtn" class="arrow right" onclick="scrollGallery(1, 'imageGallery')"> > </button>
+
+        </div>
+
+        <div class="cupcakes">
+            <h2>CUPCAKES</h2>
+            <p>Sweet, cute, and irresistible – check out our cupcake collection</p>
+
+            <div class="gallery-wrapper">
+            <button id="backBtn" class="arrow left" onclick="scrollGalleryCupcakes(-1, 'cupcakeGallery')"> < </button>         
+
+            <div class="images" id="cupcakeGallery">
+                <img src="chocolate cupcake.jpg" onclick="openImageFromSection('cupcake', 0)">
+                <img src="vanilla cupcake 2.jpg" onclick="openImageFromSection('cupcake', 1)">
+                <img src="vanilla cupcake.jpg" onclick="openImageFromSection('cupcake', 2)">
+                <img src="cherrycc.jpeg" onclick="openImageFromSection('cupcake', 3)">
+                <img src="chococc.jpg" onclick="openImageFromSection('cupcake', 4)">
+                <img src="cupcake.jpeg" onclick="openImageFromSection('cupcake', 5)">
+
+            </div>
+
+            <button id="fwdBtn" class="arrow right" onclick="scrollGalleryCupcakes(1, 'cupcakeGallery')"> > </button>
+
+        </div>
+    </main>
+    <footer>
+        <p>#THEBESTBAKERY | 123 Sweet Street, [City, State] 12345</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+    <script src="gallery.js"></script>
+    
+</body>
+</html>

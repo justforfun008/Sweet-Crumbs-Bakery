@@ -1,0 +1,299 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - [Sweet Crumbs Bakery]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: #f5e8c7; 
+    color: #4a3728; 
+    line-height: 1.6;
+    font-size: 25px;
+}
+
+  nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 230px;
+            padding: 0;
+            overflow-x: hidden;
+            transition: transform 0.3s ease;
+            z-index: 2000;
+        }
+    
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 60px;
+        }
+        
+        #menu-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: transparent;
+            color: white;
+            font-size: 50px;
+            border: none;
+            padding: 10px 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        
+        .menu {
+            list-style-type: none;
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        #collapsed {
+            position: fixed;
+            height: 100vh;
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 60px;
+            transition: transform 0.5s ease;
+            transform: translateX(0);
+            z-index: 999;
+        }
+        
+        #collapsed.menu {
+            transform: translateX(-100%);
+        }
+        
+        .navbar a {
+            display: flex;
+            text-decoration: none;
+            align-items: flex-start;
+            color: white;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            padding: 20px;
+        }
+
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li{
+            position: relative;
+        }
+        ul li a{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            text-decoration: none;
+            align-items: flex-start;
+            color: white;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            padding: 20px;
+        }
+
+.banner {
+    position: relative;
+    height: 400px;
+    background-image: url('https://via.placeholder.com/1200x400?text=Freshly+Baked+Goods'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-section {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.circle-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: absolute;
+    top: 50px;
+}
+
+.circle-image.left {
+    left: -250px;
+}
+
+.circle-image.right {
+    right: -250px;
+}
+
+.content {
+    margin: 20px 0;
+}
+
+.decor-icon {
+    width: 50px;
+    height: 10px;
+    background: url('https://via.placeholder.com/50x10?text=Wheat+Icon') center/cover; /* Placeholder for wheat/rolling pin icon */
+    margin: 20px auto;
+}
+
+.content p, .content ul {
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a0522d; 
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #854321;
+}
+
+footer {
+    background-color: #e8d5a8; 
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #d2b48c;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+        display: flex; 
+        justify-content: center; 
+        gap: 15px; 
+        margin-top: 10px; 
+    }
+    .social-icons a {
+        color: #4a3728; 
+        font-size: 24px; 
+        transition: color 0.3s ease, transform 0.3s ease; 
+    }
+
+    .social-icons a:hover {
+        color: #a0522d; 
+        transform: scale(1.2);
+    }
+    @media (max-width: 768px) {
+    .circle-image {
+        position: static;
+        margin: 20px auto;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+    }
+}
+
+
+</style>
+<body>
+    <header class="banner">
+        <div class="logo">#THEBESTBAKERY</div>
+        <h1>About Us</h1>
+    </header>
+    <main>
+        <section class="about-section">
+            <img src="bakeint.png" alt="Bakery Interior" class="circle-image left">
+            <img src="bakeint.png" alt="Baker Decorating Cake" class="circle-image right">
+            <nav id="navbar">
+        <button id="menu-toggle">=</button>    
+        <ul class="menu" id="collapsed">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="orderonline.html">Order online</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="catering.html">Catering and Events</a></li>
+            <li><a href="season.html">Seasonal specials</a></li>
+            <li><a href="customer.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="faq.html">FAQs</a></li>  
+        </ul> 
+        </nav>
+            <div class="content">
+                <div class="decor-icon top"></div>
+                <p>Welcome to #THEBESTBAKERY, where every bite tells a story of passion, tradition, and sweetness!</p>
+                <p>At #THEBESTBAKERY, we believe in the magic of freshly baked goods crafted with love and the finest ingredients. Our journey began in 2010, when our founder, Jane Doe, turned her grandmother’s recipes into a neighborhood favorite. From crusty artisan breads to decadent cakes and delicate pastries, we pour our heart into every creation.</p>
+                <p>Our mission is simple: to bring joy to your table with wholesome, handcrafted treats that warm the soul. Whether it’s a morning croissant, a custom wedding cake, or a cozy afternoon scone, we’re here to make life’s moments a little sweeter.</p>
+                <ul>
+                    <li><strong>Quality Ingredients:</strong> We source local, sustainable ingredients to ensure every bite is fresh and flavorful.</li>
+                    <li><strong>Family Recipes:</strong> Our time-honored recipes are paired with innovative twists to delight your taste buds.</li>
+                    <li><strong>Community Love:</strong> We’re proud to be part of [local area/community], hosting events and sharing smiles daily.</li>
+                </ul>
+                <p>Visit us at [Bakery Name] or order online to experience the warmth of our bakery. Let’s create delicious memories together!</p>
+                <div class="decor-icon bottom"></div>
+                <a href="#" class="cta-button">Visit Us</a>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>#THEBESTBAKERY | 123 Sweet Street, [City, State] 12345</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+</body>
+  <script>
+        document.getElementById('menu-toggle').addEventListener('click', function(){
+    document.getElementById('collapsed').classList.toggle('menu');
+    document.getElementById('main-wrapper').classList.toggle('shifted');
+});
+    </script>
+</html>

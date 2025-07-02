@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering And Events</title>
+    <link rel="stylesheet" href="catestyle.css"/>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+        <button id="menu-toggle">=</button>
+        <ul class="menu" id="collapsed">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="orderonline.html">Order Online</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="catering.html">Catering and Events</a>
+            <a href="season.html">Seasonal Specials</a>
+            <a href="customer.html">Customer Reviews</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQs</a>
+        </ul>
+    </nav>
+<main class="main-section">
+  <!-- Bakery Catering and Events -->
+  <section class="feature-section">
+    <h2>Bakery Catering & Events</h2>
+    <p>Make your events unforgettable with our handcrafted baked goods. We cater weddings, corporate events, birthdays, and more!</p>
+    <a href="#catering" class="cta-button">Explore Catering Options</a>
+  </section>
+
+  <!-- Gym Services -->
+  <section class="feature-section gym">
+    <h2>Fitness & Gym Services</h2>
+    <p>Stay strong and healthy with our state-of-the-art gym facilities and personalized training programs.</p>
+    <a href="#gym" class="cta-button">Join Our Fitness Program</a>
+  </section>
+</main>
+</body>
+<script>
+        document.getElementById('menu-toggle').addEventListener('click', function(){
+    document.getElementById('collapsed').classList.toggle('menu');
+    document.getElementById('main-wrapper').classList.toggle('shifted');
+});
+    </script>
+</html>

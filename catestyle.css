@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body {
+  font-family: 'Georgia', serif;
+  background: url('bakery.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f9e8d2;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+  nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 230px;
+            padding: 0;
+            overflow-x: hidden;
+            transition: transform 0.3s ease;
+            z-index: 2000;
+        }
+    
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 60px;
+        }
+        
+        #menu-toggle {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: transparent;
+            color: white;
+            font-size: 50px;
+            border: none;
+            padding: 10px 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        
+        .menu {
+            list-style-type: none;
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        #collapsed {
+            position: fixed;
+            height: 100vh;
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 60px;
+            transition: transform 0.5s ease;
+            transform: translateX(0);
+            z-index: 999;
+        }
+        
+        #collapsed.menu {
+            transform: translateX(-100%);
+        }
+        
+        .navbar a {
+            display: flex;
+            text-decoration: none;
+            align-items: flex-start;
+            color: white;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            padding: 20px;
+        }
+
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li{
+            position: relative;
+        }
+        ul li a{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            text-decoration: none;
+            align-items: flex-start;
+            color: white;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+            font-size: 14px;
+            padding: 20px;
+        }
+
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: rgba(30, 15, 0, 0.7);
+}
+/* Main Section Styling */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #b3aea4b7, #d3984acc);
+  min-height: 100vh;
+  margin: auto;
+}
+
+/* Feature Sections */
+.feature-section {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(99, 60, 60, 0.1);
+  max-width: 700px;
+  width: 100%;
+  margin: 20px 0;
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Headings */
+.feature-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #946a3b;
+}
+
+/* Paragraph Text */
+.feature-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #492e92;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e7549b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feature-section {
+    padding: 30px 20px;
+  }
+
+  .feature-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .feature-section p {
+    font-size: 1rem;
+  }
+}

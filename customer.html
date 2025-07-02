@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews</title>
+    <link rel="stylesheet" href="customer.css"/>
+    <link rel="icon" href="bake.jpg" type="image/jpg">
+</head>
+<body>
+  <div class="container">
+    <nav id="navbar">
+        <button id="menu-toggle">=</button>    
+        <ul class="menu" id="collapsed">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="orderonline.html">Order online</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="catering.html">Catering and Events</a></li>
+            <li><a href="season.html">Seasonal specials</a></li>
+            <li><a href="customer.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="faq.html">FAQs</a></li>  
+        </ul> 
+        </nav>
+    <section class="customer-reviews">
+  <h2 class="reviews-title">What Our Customers Say</h2>
+
+  <div class="reviews-container">
+    <div class="review-card">
+      <p class="review-text">“The unicorn cake was absolutely perfect! It tasted as good as it looked.”</p>
+      <p class="review-author">– Sarah K.</p>
+    </div>
+    <div class="review-card">
+      <p class="review-text">“Ordering was easy, and the cupcakes were a hit at our event. Highly recommend!”</p>
+      <p class="review-author">– James L.</p>
+    </div>
+    <div class="review-card">
+      <p class="review-text">“Beautiful designs and delicious flavors. Will be coming back for every occasion!”</p>
+      <p class="review-author">– Aisha M.</p>
+    </div>
+    <div class="review-card">
+      <p class="review-text">“My birthday cake was a dream come true. Thank you so much!”</p>
+      <p class="review-author">– Bella C.</p>
+    </div>
+    <div class="review-card">
+      <p class="review-text">“Fast delivery and everything arrived fresh. Five stars from me!”</p>
+      <p class="review-author">– Omar H.</p>
+    </div>
+    <div class="review-card">
+      <p class="review-text">“The team really listened to what I wanted. Custom cake turned out amazing!”</p>
+      <p class="review-author">– Rachel P.</p>
+    </div>
+    <div class="review-card">
+      <p class="review-text">“This bakery has become my go-to spot for every celebration.”</p>
+      <p class="review-author">– Martin L.</p>
+    </div>
+    <div class="review-card">
+      <p class="review-text">“Gorgeous presentation, and the taste didn’t disappoint.”</p>
+      <p class="review-author">– Dana T.</p>
+    </div>
+    <div class="review-card">
+      <p class="review-text">“Even better than the pictures on the website. I’m so impressed.”</p>
+      <p class="review-author">– Felix N.</p>
+    </div>
+    <div class="review-card">
+      <p class="review-text">“I enjoyed Their Cakes So Much. I’m so impressed.”</p>
+      <p class="review-author">– Felix N.</p>
+    </div>
+  </div>
+</section>
+</body>
+  <script>
+        document.getElementById('menu-toggle').addEventListener('click', function(){
+    document.getElementById('collapsed').classList.toggle('menu');
+    document.getElementById('main-wrapper').classList.toggle('shifted');
+});
+    </script>
+</html>
