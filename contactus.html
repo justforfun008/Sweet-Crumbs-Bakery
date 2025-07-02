@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Brown Crust Bakery</title>
+  <link href="https://unpkg.com/lucide@latest/dist/umd/lucide.js" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('bakery.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #4e342e;
+      background-image: url(background.jpg);
+    }
+
+    header {
+      background-color: #795548;
+      padding: 1rem 2rem;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      background-color: #fbe9e7;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .info-item svg {
+      color: #5d4037;
+      width: 24px;
+      height: 24px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input,
+    textarea {
+      padding: 0.75rem;
+      border: 1px solid #d7ccc8;
+      border-radius: 6px;
+      font-size: 1rem;
+      background-color: #fff;
+      color: #4e342e;
+    }
+
+    button {
+      padding: 0.75rem;
+      border: none;
+      background-color: #8d6e63;
+      color: white;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #6d4c41;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Brown Crust Bakery</h1>
+  </header>
+
+  <div class="container">
+    <div class="contact-info">
+      <div class="info-item">
+        <svg id="map-pin"></svg>
+        <span>123 Cocoa Avenue, Doughville</span>
+      </div>
+      <div class="info-item">
+        <svg id="phone"></svg>
+        <span>+234 800 123 4567</span>
+      </div>
+      <div class="info-item">
+        <svg id="mail"></svg>
+        <span>hello@browncrustbakery.com</span>
+      </div>
+    </div>
+
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
