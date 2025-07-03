@@ -72,3 +72,8 @@ specialsData.forEach(item => {
   `;
   specialsContainer.appendChild(card);
 });
+
+     document.getElementById('menu-toggle').addEventListener('click', function(){
+    document.getElementById('collapsed').classList.toggle('menu');
+    document.getElementById('main-wrapper').classList.toggle('shifted');
+});
