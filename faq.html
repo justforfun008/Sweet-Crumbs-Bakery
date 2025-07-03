@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQS</title>
+    <title>Frequently Asked Questions</title>
     <link rel="stylesheet" href="faqs.css"/>
 </head>
 <body>
   <div class="container">
-    <aside class="sidebar">
-      <nav>
-        <ul>
-          <a href="Homes.html"><li>Home</li></a>
-          <a href="aboutus.html"><li>About Us</li></a>
-          <a href="menu.html"><li>Menu</li></a>
-          <a href="orderonline.html"><li>Order Online</li></a>
-          <a href="gallery.html"><li>Gallery</li></a>
-          <a href="catering.html"><li>Catering and Events</li></a>
-          <a href="season.html"><li>Seasonal Specials</li></a>
-          <a href="customer.html"><li>Customer Reviews</li></a>
-          <a href="contactus.html"><li>Contact Us</li></a>
-          <a href="faqs.html"><li>FAQs</li></a>
-        </ul>
-      </nav>
-    </aside>
+<nav id="navbar">
+        <button id="menu-toggle">=</button>    
+        <ul class="menu" id="collapsed">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="orderonline.html">Order online</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="catering.html">Catering and Events</a></li>
+            <li><a href="season.html">Seasonal specials</a></li>
+            <li><a href="customer.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="faq.html">FAQs</a></li>  
+        </ul> 
+        </nav>
     <section class="customer-faqs">
   <h2 class="faqs-title">Frequently Asked Questions</h2>
 
@@ -71,4 +70,10 @@
   </div>
 </section>
 </body>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function(){
+    document.getElementById('collapsed').classList.toggle('menu');
+    document.getElementById('main-wrapper').classList.toggle('shifted');
+});
+    </script>
 </html>
